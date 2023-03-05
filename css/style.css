@@ -1,0 +1,164 @@
+* {
+  font-family: Helvetica;
+  color: azure;
+}
+
+body {
+  margin: 0px;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.status-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.5vh 0px;
+}
+
+.status-bar__column {
+  width: 100%;
+}
+
+.status-bar__column:first-child {
+  margin-left: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5px;
+}
+
+@keyframes bgImageShow {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#bg-image {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  animation: bgImageShow 0.5s ease-out forwards;
+  animation-delay: 1s;
+  z-index: -1;
+}
+
+#clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5vw;
+  margin: 10vh 0px;
+  padding: 10px;
+}
+
+#login-div {
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+}
+
+#login-form {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0px;
+  padding: 10px;
+}
+
+#login-form input {
+  height: 8vh;
+  width: 20vw;
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(0, 0, 0, 0.8);
+  border-style: none;
+}
+
+#greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 4vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0px;
+  padding: 10px;
+}
+
+#todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  font-size: 1vw;
+}
+
+#todo-form input::placeholder {
+  font-size: 1vw;
+}
+
+#quote {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#todo-form {
+  margin: 0px 10vw;
+}
+
+#todo-form input {
+  font-size: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px;
+  border-color: black;
+  text-align: center;
+  outline: transparent;
+  width: 100%;
+}
